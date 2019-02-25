@@ -22,25 +22,6 @@
 
 ## Installation
 
-There are options:
-
-- Platform agonistic installation: [Anaconda](#anaconda)
-- Platform specific installation: [Ubuntu](#ubuntu), [macOS](#macos), [Windows](#windows)
-
-### Anaconda
-
-```bash
-git clone https://github.com/BG2CRW/labelme_for_multi_channel_picture.git
-cd labelme_for_multi_channel_picture
-
-# Install anaconda3 and labelme
-curl -L https://github.com/wkentaro/dotfiles/raw/master/local/bin/install_anaconda3.sh | bash -s .
-source .anaconda3/bin/activate
-pip install -e .
-```
-
-## How to build standalone executable
-
 Below shows how to build the standalone executable on macOS, Linux and Windows.  
 Also, there are pre-built executables in
 [the release section](https://github.com/wkentaro/labelme/releases).
@@ -48,10 +29,11 @@ Also, there are pre-built executables in
 ```bash
 # Setup conda
 conda create --name labelme python==3.6.0
-conda activate labelme
+source activate labelme
 
-git clone https://github.com/BG2CRW/labelme_for_multi_channel_picture.git
-cd labelme_for_multi_channel_picture
+git clone https://github.com/BG2CRW/multipic_label.git
+cd multipic_label
+pip install -e .
 
 # Build the standalone executable
 pip install .
